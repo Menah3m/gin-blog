@@ -4,12 +4,14 @@ import (
 	"fmt"
 	"github.com/Menah3m/gin-blog/pkg/setting"
 	"github.com/Menah3m/gin-blog/routers"
-
+	"github.com/gin-gonic/gin"
 	"net/http"
-
 )
 
 func main()  {
+	// windows环境下开启
+	gin.DisableConsoleColor()
+
 	r := routers.InitRouter()
 
 
@@ -22,4 +24,5 @@ func main()  {
 	}
 
 	s.ListenAndServe()
+
 }

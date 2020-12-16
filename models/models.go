@@ -25,7 +25,7 @@ func init()  {
 
 	sec, err := setting.Cfg.GetSection("database")
 	if err != nil {
-		log.Fatalf("fail to load 'database': %v", err)
+		log.Fatal(2,"fail to get section 'database': %v", err)
 	}
 
 	dbType = sec.Key("TYPE").String()
