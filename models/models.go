@@ -40,6 +40,7 @@ func init()  {
 		password,
 		host,
 		dbName))
+	fmt.Println(dbType, user, password, host, dbName)
 	if err != nil{
 		log.Println(err)
 	}
@@ -52,6 +53,8 @@ func init()  {
 	db.LogMode(true)
 	db.DB().SetMaxIdleConns(10)
 	db.DB().SetMaxOpenConns(100)
+
+
 }
 
 func CloseDB()  {
