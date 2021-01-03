@@ -3,12 +3,12 @@ package v1
 import (
 	"github.com/Menah3m/gin-blog/models"
 	"github.com/Menah3m/gin-blog/pkg/e"
+	"github.com/Menah3m/gin-blog/pkg/logging"
 	"github.com/Menah3m/gin-blog/pkg/setting"
 	"github.com/Menah3m/gin-blog/pkg/util"
 	"github.com/astaxie/beego/validation"
 	"github.com/gin-gonic/gin"
 	"github.com/unknwon/com"
-	"log"
 	"net/http"
 )
 
@@ -30,7 +30,7 @@ func GetArticle(c *gin.Context)  {
 		}
 	} else {
 		for _,err := range valid.Errors{
-			log.Printf("err.key: %s, err.message:%s", err.Key, err.Message)
+			logging.Info("err.key: %s, err.message:%s", err.Key, err.Message)
 		}
 	}
 
@@ -73,7 +73,7 @@ func GetArticles(c *gin.Context)  {
 
 	} else {
 		for _,err := range valid.Errors{
-			log.Printf("err.key: %s, err.message: %s", err.Key, err.Message)
+			logging.Info("err.key: %s, err.message: %s", err.Key, err.Message)
 		}
 	}
 
@@ -119,7 +119,7 @@ func AddArticle(c *gin.Context)  {
 		}
 	} else {
 		for _, err := range valid.Errors{
-			log.Printf("err.key: %s, err.message: %s", err.Key, err.Message)
+			logging.Info("err.key: %s, err.message: %s", err.Key, err.Message)
 		}
 	}
 
@@ -184,7 +184,7 @@ func EditArticle(c *gin.Context)  {
 		}
 	} else {
 		for _, err := range valid.Errors{
-			log.Printf("err.key: %s, err.message: %s", err.Key, err.Message)
+			logging.Info("err.key: %s, err.message: %s", err.Key, err.Message)
 		}
 	}
 
@@ -213,7 +213,7 @@ func DeleteArticle(c *gin.Context)  {
 		}
 	} else {
 		for _, err := range valid.Errors{
-			log.Printf("err.key: %s, err.message: %s", err.Key, err.Message)
+			logging.Info("err.key: %s, err.message: %s", err.Key, err.Message)
 		}
 	}
 
