@@ -3,8 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="e907127e-299c-4f7f-8750-33de072456f2" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routers/api/v1/article.go" beforeDir="false" afterPath="$PROJECT_DIR$/routers/api/v1/article.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routers/api/v1/auth.go" beforeDir="false" afterPath="$PROJECT_DIR$/routers/api/v1/auth.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,6 +40,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="go.import.settings.migrated" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="com.goide.configuration.GoProjectSettingsConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -68,14 +70,18 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1360" y="309" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1608029143309" />
-    <state x="1220" y="274" key="FileChooserDialogImpl" timestamp="1609243461576">
+    <state x="1220" y="274" key="FileChooserDialogImpl" timestamp="1609839792130">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1220" y="274" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1609243461576" />
+    <state x="1220" y="274" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1609839792130" />
     <state x="1016" y="320" key="Registry" timestamp="1608126005727">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1016" y="320" key="Registry/0.0.1920.1040@0.0.1920.1040" timestamp="1608126005727" />
+    <state x="922" y="167" key="SettingsEditor" timestamp="1610881376408">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="922" y="167" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1610881376408" />
     <state x="1103" y="229" width="672" height="678" key="search.everywhere.popup" timestamp="1609671714833">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

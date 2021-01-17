@@ -4,25 +4,24 @@ import (
 	"fmt"
 	"github.com/Menah3m/gin-blog/pkg/setting"
 	"github.com/Menah3m/gin-blog/routers"
-	"github.com/gin-gonic/gin"
-	"net/http"
+	"github.com/fvbock/endless"
+	"log"
+	"syscall"
 )
 
 func main()  {
-	// windows环境下开启
-	gin.DisableConsoleColor()
+	endless.DefaultReadTimeOut = setting.ReadTimeout
+	endless.DefaultWriteTimeOut = setting.WriteTimeout
+	endless.DefaultMaxHeaderBytes = 1 << 20
+	endPoint := fmt.Sprintf(":%d", setting.HTTPPort)
 
-	r := routers.InitRouter()
-
-
-	s := &http.Server{
-		Addr: fmt.Sprintf(":%d", setting.HTTPPort),
-		Handler: r,
-		ReadTimeout: setting.ReadTimeout,
-		WriteTimeout: setting.WriteTimeout,
-		MaxHeaderBytes: 1 << 20,
+	server := endless.NewServer(endPoint, routers.InitRouter())
+	server.BeforeBegin = func(add string) {
+		log.Printf("Actual pid is %d", syscall.Getpid())
 	}
 
-	s.ListenAndServe()
-
+	err := server.ListenAndServe()
+	if err != nil{
+		log.Printf("Server err: %v", err)
+	}
 }
